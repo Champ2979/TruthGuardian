@@ -18,7 +18,7 @@ def predict_probabilities(text, model):
     return model.predict_proba([text])[0]
 
 # App layout
-st.markdown('<h1 class="title">Truth Guardian</h1>', unsafe_allow_html=True)
+st.markdown('<h1 class="title">Truth Guardian - Harassment Classifier 🛡️</h1>', unsafe_allow_html=True)
 
 # Text input
 text_input = st.text_input('Enter the text:', '')
