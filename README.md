@@ -1,6 +1,6 @@
 # Truth Guardian - Harassment Classifier 🛡️
 
-[![Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://your-app-url.herokuapp.com)
+[![Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://truthguardian.streamlit.app/)
 
 A machine learning-powered web application for classifying harassment-related text into categories: Commenting, Ogling/Facial Expressions/Staring, and Touching/Groping.
 
