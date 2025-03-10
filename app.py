@@ -60,7 +60,7 @@ if st.button('Predict'):
 st.markdown('<div class="about-section">', unsafe_allow_html=True)
 st.markdown('#### About')
 st.markdown('''
-This Streamlit app is made with love by the team Deception Detectors.
+This Streamlit app is made with love by the team Deception Detectors of VIT Bhopal.
 - Powered by machine learning
 - Explainable AI approach
 - Real-time classification

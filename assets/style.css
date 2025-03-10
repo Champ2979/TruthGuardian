@@ -1,137 +1,98 @@
-/* Enhanced CSS styling */
-/* Overall layout */
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
+/* Background with reduced animation intensity */
 body {
-    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #6bcfae 0%, #109977 100%);
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
     min-height: 100vh;
     margin: 0;
-    padding: 20px 0;
-    line-height: 1.6;
+    padding: 20px;
+    color: #2c3e50; /* Added default text color */
 }
 
-.container {
-    max-width: 800px;
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Main container with better contrast */
+.stApp {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     margin: 20px auto;
+    max-width: 800px;
     padding: 30px;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 15px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
+    color: #2c3e50; /* Explicit text color */
 }
 
-/* Gradient title with animation */
+/* Title with better visibility */
 .title {
     text-align: center;
-    font-size: 2.5rem;
-    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    font-size: 2.8rem !important;
+    color: #2c3e50 !important; /* Changed from white to dark color */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
     margin-bottom: 2rem;
-    padding: 10px 0;
 }
 
-@keyframes titleSlide {
-    from { transform: translateY(-20px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
-
-/* Modern text input with focus effect */
-.stTextInput>div>div>input {
-    width: 100%;
-    padding: 1rem;
-    font-size: 1rem;
-    border: 2px solid #e0e0e0 !important;
-    border-radius: 10px !important;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    background: white !important;
-}
-
-.stTextInput>div>div>input:focus {
-    border-color: #3498db !important;
-    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1) !important;
-}
-
-/* Modern button styling */
-.stButton>button {
-    width: 100%;
-    padding: 1rem !important;
-    font-size: 1.1rem !important;
-    background-color: #3498db !important;
-    color: white !important;
-    border: none !important;
-    border-radius: 10px !important;
-    cursor: pointer;
-    transition: all 0.3s ease !important;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
-}
-
-.stButton>button:hover {
-    background-color: #2980b9 !important;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15) !important;
-}
-
-/* Enhanced probability display */
+/* Prediction results section - increased contrast */
 .predicted-probabilities {
-    margin-top: 2rem;
-    background: white;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.95) !important;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #2c3e50 !important;
 }
 
 .probability-item {
-    margin: 1rem 0;
-    padding: 1.2rem;
-    background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+    background: rgba(255, 255, 255, 0.9) !important;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    padding: 15px;
+    margin: 15px 0;
+    color: #2c3e50 !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.probability-bar {
-    height: 8px;
-    background: #e0e0e0;
-    border-radius: 4px;
-    margin-top: 0.5rem;
-    overflow: hidden;
+/* Better text contrast in all elements */
+.stMarkdown, .stTextInput>label, .stButton>button, .stAlert {
+    color: #2c3e50 !important;
 }
 
+/* Input field improvements */
+.stTextInput>div>div>input {
+    color: #2c3e50 !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Button contrast improvement */
+.stButton>button {
+    background: linear-gradient(45deg, #23a6d5, #23d5ab) !important;
+    color: white !important; /* Keep button text white */
+}
+
+/* Probability bars visibility */
 .bar-fill {
-    height: 100%;
-    background: linear-gradient(90deg, #3498db 0%, #2c3e50 100%);
-    transition: width 0.5s ease;
+    background: linear-gradient(90deg, #23a6d5, #2c3e50) !important;
 }
 
-/* About section styling */
-.about-section {
-    margin-top: 3rem;
-    padding: 2rem;
-    background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
-    border-radius: 15px;
-    border: 1px solid rgba(52, 152, 219, 0.1);
+/* Remove floating particles effect */
+body::before {
+    content: none;
 }
 
-.about-section h3 {
-    color: #2c3e50;
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 0.5rem;
-}
-
-/* Responsive design */
+/* Mobile responsive text */
 @media (max-width: 768px) {
-    .container {
-        padding: 15px;
-    }
-    
     .title {
-        font-size: 2rem;
+        font-size: 2rem !important;
     }
-    
-    .stTextInput>div>div>input {
-        font-size: 0.9rem;
+    body {
+        padding: 10px;
     }
 }
